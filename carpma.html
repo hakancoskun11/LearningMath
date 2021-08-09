@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background: lightskyblue;
+            background-image: url("images/background3.jpg")
+            
+        }
+
+        #canvas {
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: yellow;
+            width: 700px;
+            height: 300px;
+            margin: 50px auto;
+        }
+
+        #primary-number,
+        #secondary-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: bold;
+            width: 125px;
+            height: 125px;
+            box-sizing: border-box;
+        }
+
+        #primary-number {
+            border: solid 4px green;
+        }
+
+        #secondary-number {
+            border: solid 4px blue;
+        }
+
+        #add,
+        #equal {
+            font-weight: bold;
+            font-size: 40px;
+            padding: 5px;
+        }
+
+        input {
+            border: solid 2px cyan;
+            width: 150px;
+            height: 30px;
+            padding-left: 25px;
+        }
+
+        button {
+            width: 100px;
+            height: 35px;
+            margin: 5px;
+            background: red;
+            color: white;
+            border: 1px solid lightgrey;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #f0d124;
+            height: 50px;
+
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        li a:hover:not(.active) {
+            background-color: rgb(214, 238, 3);
+        }
+
+        .active {
+            background-color: #f39c12;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+
+        <ul>
+
+            <li><a class="aktif" href="./index.html">Ana sayfa</a></li>
+            <li><a href="./toplama.html">Toplama Oyunu</a></li>
+            <li><a href="./cikarma.html">Çıkarma Oyunu</a></li>
+            <li><a href="./carpma.html">Çarpma Oyunu</a></li>
+            <li><a href="./bolme.html">Bölme Oyunu</a></li>
+            <li><a href="./quiz.html">Karışık Oyna</a></li>
+
+        </ul>
+    </div>
+    <div id="canvas">
+        <div id="primary-number">7</div>
+        <div id="add">x</div>
+        <div id="secondary-number">10</div>
+        <div id="equal">=</div>
+        <div>
+            <input type="number" id="guess">
+        </div>
+        <div>
+            <button id="btn">Kontrol et</button>
+        </div>
+    </div>
+    <script>
+        let firstNumber = parseInt(Math.random() * 100);
+        let secondNumber = parseInt(Math.random() * 10);
+
+       
+        let total = firstNumber * secondNumber;
+
+        
+        let primary = document.getElementById('primary-number');
+        primary.innerHTML = `<p>${firstNumber}</p>`;
+
+        let secondary = document.getElementById('secondary-number');
+        secondary.innerHTML = `<p>${secondNumber}</p>`
+
+        let button = document.getElementById('btn')
+
+        button.addEventListener('click', function () {
+
+            let guess = document.getElementById('guess').value;
+            guess = Number(guess);
+            
+            if (guess === total) {
+                alert('Doğru Bildin!');
+                window.location.reload()
+            } else {
+                alert('Üzgünüm. Yanlış Cevap. Doğru cevap ' + total + ' Hadi bir daha deneyelim.')
+                window.location.reload()
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Ögreniyorum</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <ul>
+                <li><a class="aktif" href="./index.html">Ana sayfa</a></li>
+                <li><a href="./toplama.html">Toplama Oyunu</a></li>
+                <li><a href="./cikarma.html">Çıkarma Oyunu</a></li>
+                <li><a href="./carpma.html">Çarpma Oyunu</a></li>
+                <li><a href="./bolme.html">Bölme Oyunu</a></li>
+                <li><a href="./quiz.html">Karışık Oyna</a></li> 
+             </ul>
+
+            <script>
+                window.onload = function () {
+                    let sozListesi = ["en küçük asal sayı 2'dir.",
+                        "Pi sayısının içinde tüm her şey vardır.",
+                        "Bir sayının kendisine bölümü yine o sayıyı verir",
+                        "Bir sayıyı 0 ile çarpınca sonuç 0 olur",
+                        "Eğer elinizde pizza şeklinde basık bir silindir varsa ve hacmini hesaplama istiyorsanız, yarıçapı Z- yüksekliği A olarak ele alırsak ortaya çıkan formül=Pİ*Z*Z*A olacaktır.",
+                        "Negatif bir sayı ile negatif bir sayının çarpımı sonucu pozitif bir sayı verir.",
+                        "Pozitif bir sayı ile negatif bir sayının çarpımı sonucu negatif bir sayı verir.",
+                        "Bir üçgenin iç açıları toplamı 180 derecedir.",
+                        "En küçük doğal sayı 0' dır."
+                    ]
+                    rastgeleSoz = sozListesi[Math.floor(Math.random() * sozListesi.length)];
+                    console.log(rastgeleSoz)
+                    document.getElementById('scrolling').innerHTML = rastgeleSoz;
+                }
+            </script>
+            <marquee id="scrolling" direction=right></marquee>
+        
+
+        <div style="text-align: center" class="content">
+            <h3 class="title1">Hoşgeldin eğitici ve eğlenceli oyunlar seni bekliyor. Hadi bir kategori seç ve
+                başlayalım!
+            </h3>
+            <img src="images/kids.jpg" width="500">
+        </div>
+
+        <div class="sidebar">
+            <img src="images/math.jpg" width="275" height="295">
+            <img src="images/math2.jpg" width="275" height="295">
+        </div>
+
+        <div class="clear"></div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
+</body>
+</html>
